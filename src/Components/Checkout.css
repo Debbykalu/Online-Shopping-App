@@ -1,3 +1,21 @@
 .checkout_title h2{
 padding: 20px;
 }
+
+.checkout {
+    display: flex; /* Display children side by side */
+    align-items: center; /* Vertically align items */
+  }
+  
+  .checkout-left {
+    flex: 1; /* Expand to fill available space */
+    padding: 20px; /* Add padding if needed */
+  }
+  
+  .checkout-right {
+    flex: 1; /* Expand to fill available space */
+    padding: 20px; /* Add padding if needed */
+  }
+.checkout_title{
+    flex-direction: column;
+}  

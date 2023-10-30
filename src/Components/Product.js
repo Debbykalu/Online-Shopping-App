@@ -1,8 +1,26 @@
 import React from 'react';
 import '../Components/Product.css';
+import { useStateValue } from './StateProvider';
+
+import products from '../data';
 
 
-function Product({products}) {
+function Product({id, title, price, image}) {
+    const [{cart}, dispatch] = useStateValue(); // Access cart from the state
+
+  const addToCart = () => {
+    dispatch({
+      type: 'ADD_TO_CART',
+      item: {
+        id: id,
+        title: title,
+        price: price,
+        image: image,
+      },
+    });
+  };
+
+
   return (
     <div className='products_item'>
         {products.map(product => (
@@ -12,7 +30,7 @@ function Product({products}) {
                 <p>{product.rating}</p>
                 <img src={product.image} alt='' width={360}/>
                 <div className='button-container'>
-                <button type='button'>Add to Cart</button>
+                <button type='button' onClick={addToCart}>Add to Cart</button>
                 </div>
             </div>
             
