@@ -13,6 +13,7 @@ function Checkout() {
             </div>
         </div>
         <div className='checkout-right'>
+            <h2>Move it to the right</h2>
             <Subtotal />
         </div>
     </div>
