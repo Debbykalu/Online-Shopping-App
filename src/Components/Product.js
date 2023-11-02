@@ -5,19 +5,20 @@ import { useStateValue } from './StateProvider';
 import products from '../data';
 
 
-function Product({id, title, price, image}) {
-    const [{cart}, dispatch] = useStateValue(); // Access cart from the state
+function Product({id, title, price,rating, image}) {
+    const [, dispatch] = useStateValue(); // Access cart from the state
 
   const addToCart = () => {
     dispatch({
-      type: 'ADD_TO_CART',
-      item: {
-        id: id,
-        title: title,
-        price: price,
-        image: image,
-      },
-    });
+        type: 'ADD_TO_CART',
+        item: {
+          id: id,
+          title: title,
+          price: price,
+          rating: rating, 
+          image: image,   
+        },
+      });    
   };
 
 
