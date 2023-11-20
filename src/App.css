@@ -1,9 +1,87 @@
-html {
-  font: 14px/1.5 Roboto, sans-serif;
- }
- 
- body {
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.App {
+  text-align: center;
+  border: 1px solid #ccc;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  border-radius: 70px 70px 70px 70px;
+  padding: 40px;
+  width: 100%;
+  max-width: 600px; 
+  margin: auto;
+  background-color: #ffbd00;
+  color: white;
+  margin-top: 30px;
+}
+
+h1 {
+  color: #ffffff;
+  font-size: 30px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  padding: 20px;
+  font-size: 18px;
+  margin: 5px 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  background-color:  #ffc7008a;
+}
+
+li:hover {
+  background-color: #4f451b2e;
+}
+
+ul li p {
+  margin: 0;
+}
+
+.selected {
+  background-color: #d3d3d3;
+}
+
+.transactions {
+  margin-top: 20px;
+}
+
+/* SpendingBreakdownScreen.css */
+.SpendingBreakdownScreen {
+  max-width: 600px;
   margin: 0 auto;
- }
+}
+
+.transactions ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+.transactions li {
+  margin: 5px 0;
+  padding: 10px;
+  background-color: #ffc7008a;
+}
+
+.transactions li p {
+  margin: 0;
+}
+
+.transactions li:hover {
+  background-color: #4f451b2e;
+}
+
 
  

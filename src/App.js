@@ -1,22 +1,17 @@
+// App.js
+import React from 'react';
 import './App.css';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Header from './Components/Header';
-import Home from './Components/Home';
-import Checkout from './Components/Checkout';
+import BreakDown from './Components/BreakDown';
+import { CategoryProvider } from './Components/CategoryContext';
 
-
-function App() {
+const App = () => {
   return (
-    <Router>
-    <div className="App">
-      <Header />
-      <Routes>
-        <Route path="/checkout" element={<Checkout />} />
-        <Route path="/" element={<Home />} />
-      </Routes>
-    </div>
-  </Router>
+    <CategoryProvider>
+      <div className="App">
+        <BreakDown />
+      </div>
+    </CategoryProvider>
   );
-}
+};
 
 export default App;
